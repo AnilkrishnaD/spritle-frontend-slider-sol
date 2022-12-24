@@ -1,0 +1,85 @@
+
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        background-color: chocolate;
+    }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    border: 2 px solid red;
+    background-color: azure;
+    border-radius: 10px;
+    min-height: 220px;
+    min-width: 280px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        background-color: gainsboro;
+        min-height: 190px;
+        min-width: 190px;
+    }
+}
+
+.label {
+    font-size: 18px;
+    font-style: normal;
+    font-family: roboto;
+    min-height: 30px;
+    margin: 4px;
+    
+}
+
+
+.input {
+    min-height: 30px;
+    min-width: 60px;
+    margin: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .input {
+        min-height: 20px;
+        min-width: 45px;
+        margin: 2px;
+
+    }
+}
+
+.signin-button {
+    min-width: 60px;
+    min-height: 40px;
+    border: 2px solid blueviolet;
+    background-color: yellowgreen;
+    margin: 8px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.label {
+    min-height: 30px;
+    min-width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .label {
+        min-height: 20px;
+        min-width: 35px;
+    }
+}
