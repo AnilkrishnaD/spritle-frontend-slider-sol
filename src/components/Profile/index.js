@@ -1,5 +1,7 @@
+import Cookies from "js-cookie";
 import { Component } from "react";
-import { Redirect, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+
 
 import './index.css'
 
@@ -67,7 +69,7 @@ class Profile extends Component {
         return(
             <div className="details-container">
                 <label htmlFor="address" className="label">Address</label>
-                <textarea rows="4" cols="50" value={address} placeholder="Enter your address" onChange={this.onChangeAddress}></textarea>
+                <textarea rows="4" cols="50" value={address} placeholder="Enter your address" onChange={this.onChangeAddress} className="address"></textarea>
             </div>
         )
     }
@@ -92,6 +94,13 @@ class Profile extends Component {
 
     }
 
+    onClickLogOut = () => {
+        Cookies.remove('jwtToken')
+    }
+
+
+
+
     render() {
 
         const {detailsFilled} = this.state
@@ -103,7 +112,7 @@ class Profile extends Component {
                     <h1 className="heading">Thank you Spritle</h1>
                     <NavLink to="codingquestion">
                         <button type="text" className="opencode-button">
-                            Open code
+                            Open Coding Question
                         </button>
                     </NavLink>
                     
@@ -120,6 +129,8 @@ class Profile extends Component {
                    {this.renderAddressContainer()}
                    <button type="submit" className="button">Update Details</button>
                </form>
+
+               <button type="button" className="logout">Logout</button>
             </div>
         )
         }
